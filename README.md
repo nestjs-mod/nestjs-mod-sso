@@ -21,6 +21,7 @@ git clone git@github.com:nestjs-mod/nestjs-mod-sso.git
 cd nestjs-mod-sso
 npm i
 cp ./example.env ./.env
+npm run manual:prepare
 ```
 
 ### Start
@@ -56,6 +57,7 @@ git clone git@github.com:nestjs-mod/nestjs-mod-sso.git
 cd nestjs-mod-sso
 npm i
 cp ./example.env ./.env
+npm run manual:prepare
 ```
 
 ### Start
@@ -91,6 +93,7 @@ git clone git@github.com:nestjs-mod/nestjs-mod-sso.git
 cd nestjs-mod-sso
 npm i
 cp ./example.env ./.env
+npm run manual:prepare
 ```
 
 ### Start
