@@ -1,3 +1,9 @@
+## [1.18.3](https://github.com/nestjs-mod/nestjs-mod-sso/compare/server-v1.18.2...server-v1.18.3) (2025-07-06)
+
+### Bug Fixes
+
+- update changePassword logic ([d5f17f9](https://github.com/nestjs-mod/nestjs-mod-sso/commit/d5f17f9291ccf6b2829a468ceea78e7ab89d05ef))
+
 ## [1.18.2](https://github.com/nestjs-mod/nestjs-mod-sso/compare/server-v1.18.1...server-v1.18.2) (2025-07-05)
 
 ### Bug Fixes
