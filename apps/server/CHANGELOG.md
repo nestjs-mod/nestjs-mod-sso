@@ -1,3 +1,9 @@
+## [1.19.1](https://github.com/nestjs-mod/nestjs-mod-sso/compare/server-v1.19.0...server-v1.19.1) (2025-07-16)
+
+### Bug Fixes
+
+- restore defaul k8s env values ([fc06a0a](https://github.com/nestjs-mod/nestjs-mod-sso/commit/fc06a0aacc0fa5b8649f95276bf93596e767aa70))
+
 # [1.19.0](https://github.com/nestjs-mod/nestjs-mod-sso/compare/server-v1.18.3...server-v1.19.0) (2025-07-16)
 
 ### Features
