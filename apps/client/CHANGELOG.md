@@ -1,3 +1,9 @@
+# [1.16.0](https://github.com/nestjs-mod/nestjs-mod-sso/compare/client-v1.15.1...client-v1.16.0) (2025-07-16)
+
+### Features
+
+- update code from site15 ([92b128c](https://github.com/nestjs-mod/nestjs-mod-sso/commit/92b128ce1d7d6b508842d961f548fd200da677c3))
+
 ## [1.15.1](https://github.com/nestjs-mod/nestjs-mod-sso/compare/client-v1.15.0...client-v1.15.1) (2025-07-05)
 
 ### Bug Fixes
