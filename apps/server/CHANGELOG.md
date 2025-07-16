@@ -1,3 +1,9 @@
+# [1.19.0](https://github.com/nestjs-mod/nestjs-mod-sso/compare/server-v1.18.3...server-v1.19.0) (2025-07-16)
+
+### Features
+
+- update code from site15 ([92b128c](https://github.com/nestjs-mod/nestjs-mod-sso/commit/92b128ce1d7d6b508842d961f548fd200da677c3))
+
 ## [1.18.3](https://github.com/nestjs-mod/nestjs-mod-sso/compare/server-v1.18.2...server-v1.18.3) (2025-07-06)
 
 ### Bug Fixes
