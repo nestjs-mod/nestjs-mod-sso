@@ -1,3 +1,9 @@
+# [1.12.0](https://github.com/nestjs-mod/nestjs-mod-sso/compare/rest-sdk-angular-v1.11.0...rest-sdk-angular-v1.12.0) (2025-07-16)
+
+### Features
+
+- update libs ([78e545e](https://github.com/nestjs-mod/nestjs-mod-sso/commit/78e545e8fd17dbf883b5d676017423099aaf6894))
+
 # [1.11.0](https://github.com/nestjs-mod/nestjs-mod-sso/compare/rest-sdk-angular-v1.10.1...rest-sdk-angular-v1.11.0) (2025-07-16)
 
 ### Features
