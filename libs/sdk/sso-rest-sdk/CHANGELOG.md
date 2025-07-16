@@ -1,3 +1,9 @@
+# [1.10.0](https://github.com/nestjs-mod/nestjs-mod-sso/compare/rest-sdk-v1.9.0...rest-sdk-v1.10.0) (2025-07-16)
+
+### Features
+
+- update libs ([78e545e](https://github.com/nestjs-mod/nestjs-mod-sso/commit/78e545e8fd17dbf883b5d676017423099aaf6894))
+
 # [1.9.0](https://github.com/nestjs-mod/nestjs-mod-sso/compare/rest-sdk-v1.8.1...rest-sdk-v1.9.0) (2025-07-16)
 
 ### Features
