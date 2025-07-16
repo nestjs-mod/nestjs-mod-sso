@@ -10,6 +10,12 @@ msgstr ""
 msgid "Users for tenant #{{tenantId}}"
 msgstr "Пользователи тенанта #{{tenantId}}"
 
+msgid "select tenant"
+msgstr "выберите тенант"
+
+msgid "Loading..."
+msgstr "Загрузка..."
+
 msgid "input search text"
 msgstr "введите текст поиска"
 
@@ -438,6 +444,13 @@ msgstr "ИД. не установлен"
 
 msgid "sso-invite-members.form.fields.emails"
 msgstr "Адреса электронной почты (через запятую)"
+
+msgid ""
+"Email confirmation email sent, link will be valid for {{timeoutMinutes}} "
+"minutes"
+msgstr ""
+"Письмо для подтверждения почты отправлено, ссылка будет действительна в "
+"течении {{timeoutMinutes}} мин."
 
 msgid "Validation errors"
 msgstr "Ошибка при проверке данных"

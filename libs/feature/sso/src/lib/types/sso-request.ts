@@ -16,5 +16,7 @@ export type SsoRequest = {
   ssoAccessTokenData?: SsoAccessTokenData;
   skipEmptySsoUser?: boolean;
   skipThrottle?: boolean;
+  skipEmailVerification?: boolean;
+  allowChangeTwoFactorTimeout?: boolean;
   headers: Record<string, string>;
 };

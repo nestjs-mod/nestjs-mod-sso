@@ -27,5 +27,4 @@ services:
       - 'nestjs-mod-sso-postgre-sql-volume:/bitnami/postgresql'
 volumes:
   nestjs-mod-sso-postgre-sql-volume:
-    external: true
     name: 'nestjs-mod-sso-postgre-sql-volume'

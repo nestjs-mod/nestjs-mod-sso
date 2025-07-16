@@ -34,6 +34,10 @@ test.describe('Validation (ru)', () => {
       (minioURL) => localStorage.setItem('minioURL', minioURL),
       get('SINGLE_SIGN_ON_MINIO_URL').required().asString(),
     );
+    await page.evaluate(
+      (code) => localStorage.setItem('x-skip-email-verification', code),
+      get('SINGLE_SIGN_ON_SSO_ADMIN_SECRET').required().asString(),
+    );
   });
 
   test.afterAll(async () => {

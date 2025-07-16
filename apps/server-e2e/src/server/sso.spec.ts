@@ -14,11 +14,13 @@ describe('Sso (e2e)', () => {
     user = await new SsoRestClientHelper({
       headers: {
         'x-skip-throttle': process.env.SINGLE_SIGN_ON_SSO_ADMIN_SECRET,
+        'x-skip-email-verification': process.env.SINGLE_SIGN_ON_SSO_ADMIN_SECRET,
       },
     }).generateRandomUser();
     tenant = await new SsoRestClientHelper({
       headers: {
         'x-skip-throttle': process.env.SINGLE_SIGN_ON_SSO_ADMIN_SECRET,
+        'x-skip-email-verification': process.env.SINGLE_SIGN_ON_SSO_ADMIN_SECRET,
       },
     }).generateRandomUser();
   });

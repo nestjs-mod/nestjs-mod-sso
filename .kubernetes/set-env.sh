@@ -3,12 +3,7 @@ set -e
 
 export REPOSITORY=nestjs-mod/nestjs-mod-sso
 export REGISTRY=ghcr.io
-export BASE_SINGLE_SIGN_ON_IMAGE_NAME="${REPOSITORY}-base-server"
-export BUILDER_IMAGE_NAME="${REPOSITORY}-builder"
-export MIGRATIONS_IMAGE_NAME="${REPOSITORY}-migrations"
 export SINGLE_SIGN_ON_IMAGE_NAME="${REPOSITORY}-server"
-export NGINX_IMAGE_NAME="${REPOSITORY}-nginx"
-export E2E_TESTS_IMAGE_NAME="${REPOSITORY}-e2e-tests"
 export COMPOSE_INTERACTIVE_NO_CLI=1
 export NX_DAEMON=false
 export NX_PARALLEL=1
@@ -28,70 +23,88 @@ fi
 
 # node
 if [ -z "${NAMESPACE}" ]; then
-    export NAMESPACE=sso
+    echo "Error: NAMESPACE not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 
 # common
 if [ -z "${SINGLE_SIGN_ON_DOMAIN}" ]; then
-    export SINGLE_SIGN_ON_DOMAIN=example.com
+    echo "Error: SINGLE_SIGN_ON_DOMAIN not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 
 # server
 if [ -z "${SINGLE_SIGN_ON_PORT}" ]; then
-    export SINGLE_SIGN_ON_PORT=9191
+    echo "Error: SINGLE_SIGN_ON_PORT not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 
 # server: webhook database
 if [ -z "${SINGLE_SIGN_ON_WEBHOOK_DATABASE_PASSWORD}" ]; then
-    export SINGLE_SIGN_ON_WEBHOOK_DATABASE_PASSWORD=webhook_password
+    echo "Error: SINGLE_SIGN_ON_WEBHOOK_DATABASE_PASSWORD not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 if [ -z "${SINGLE_SIGN_ON_WEBHOOK_DATABASE_USERNAME}" ]; then
-    export SINGLE_SIGN_ON_WEBHOOK_DATABASE_USERNAME=${NAMESPACE}_webhook
+    echo "Error: SINGLE_SIGN_ON_WEBHOOK_DATABASE_USERNAME not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 if [ -z "${SINGLE_SIGN_ON_WEBHOOK_DATABASE_NAME}" ]; then
-    export SINGLE_SIGN_ON_WEBHOOK_DATABASE_NAME=${NAMESPACE}_webhook
+    echo "Error: SINGLE_SIGN_ON_WEBHOOK_DATABASE_NAME not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 
 # server: sso database
 if [ -z "${SINGLE_SIGN_ON_SSO_DATABASE_PASSWORD}" ]; then
-    export SINGLE_SIGN_ON_SSO_DATABASE_PASSWORD=sso_password
+    echo "Error: SINGLE_SIGN_ON_SSO_DATABASE_PASSWORD not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 if [ -z "${SINGLE_SIGN_ON_SSO_DATABASE_USERNAME}" ]; then
-    export SINGLE_SIGN_ON_SSO_DATABASE_USERNAME=${NAMESPACE}_sso
+    echo "Error: SINGLE_SIGN_ON_SSO_DATABASE_USERNAME not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 if [ -z "${SINGLE_SIGN_ON_SSO_DATABASE_NAME}" ]; then
-    export SINGLE_SIGN_ON_SSO_DATABASE_NAME=${NAMESPACE}_sso
+    echo "Error: SINGLE_SIGN_ON_SSO_DATABASE_NAME not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 
 # server: notifications database
 if [ -z "${SINGLE_SIGN_ON_NOTIFICATIONS_DATABASE_PASSWORD}" ]; then
-    export SINGLE_SIGN_ON_NOTIFICATIONS_DATABASE_PASSWORD=notifications_password
+    echo "Error: SINGLE_SIGN_ON_NOTIFICATIONS_DATABASE_PASSWORD not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 if [ -z "${SINGLE_SIGN_ON_NOTIFICATIONS_DATABASE_USERNAME}" ]; then
-    export SINGLE_SIGN_ON_NOTIFICATIONS_DATABASE_USERNAME=${NAMESPACE}_notifications
+    echo "Error: SINGLE_SIGN_ON_NOTIFICATIONS_DATABASE_USERNAME not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 if [ -z "${SINGLE_SIGN_ON_NOTIFICATIONS_DATABASE_NAME}" ]; then
-    export SINGLE_SIGN_ON_NOTIFICATIONS_DATABASE_NAME=${NAMESPACE}_notifications
+    echo "Error: SINGLE_SIGN_ON_NOTIFICATIONS_DATABASE_NAME not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 
 # server: two factor database
 if [ -z "${SINGLE_SIGN_ON_TWO_FACTOR_DATABASE_PASSWORD}" ]; then
-    export SINGLE_SIGN_ON_TWO_FACTOR_DATABASE_PASSWORD=two_factor_password
+    echo "Error: SINGLE_SIGN_ON_TWO_FACTOR_DATABASE_PASSWORD not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 if [ -z "${SINGLE_SIGN_ON_TWO_FACTOR_DATABASE_USERNAME}" ]; then
-    export SINGLE_SIGN_ON_TWO_FACTOR_DATABASE_USERNAME=${NAMESPACE}_two_factor
+    echo "Error: SINGLE_SIGN_ON_TWO_FACTOR_DATABASE_USERNAME not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 if [ -z "${SINGLE_SIGN_ON_TWO_FACTOR_DATABASE_NAME}" ]; then
-    export SINGLE_SIGN_ON_TWO_FACTOR_DATABASE_NAME=${NAMESPACE}_two_factor
+    echo "Error: SINGLE_SIGN_ON_TWO_FACTOR_DATABASE_NAME not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 
 # database
 if [ -z "${SINGLE_SIGN_ON_POSTGRE_SQL_POSTGRESQL_USERNAME}" ]; then
-    export SINGLE_SIGN_ON_POSTGRE_SQL_POSTGRESQL_USERNAME=postgres
+    echo "Error: SINGLE_SIGN_ON_POSTGRE_SQL_POSTGRESQL_USERNAME not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 if [ -z "${SINGLE_SIGN_ON_POSTGRE_SQL_POSTGRESQL_PASSWORD}" ]; then
-    export SINGLE_SIGN_ON_POSTGRE_SQL_POSTGRESQL_PASSWORD=postgres_password
+    echo "Error: SINGLE_SIGN_ON_POSTGRE_SQL_POSTGRESQL_PASSWORD not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi
 if [ -z "${SINGLE_SIGN_ON_POSTGRE_SQL_POSTGRESQL_DATABASE}" ]; then
-    export SINGLE_SIGN_ON_POSTGRE_SQL_POSTGRESQL_DATABASE=postgres
+    echo "Error: SINGLE_SIGN_ON_POSTGRE_SQL_POSTGRESQL_DATABASE not!" >&2 # Redirect error message to stderr
+    exit 1 # Exit with an error code
 fi

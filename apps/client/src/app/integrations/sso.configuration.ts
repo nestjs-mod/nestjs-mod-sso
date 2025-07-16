@@ -41,15 +41,9 @@ export class SsoIntegrationConfiguration implements SsoConfiguration {
     const lang = this.translocoService.getActiveLang();
     const accessToken = this.tokensService.getAccessToken();
     const activeTenantAuthorizationHeaders = this.ssoActiveTenantService.getAuthorizationHeaders();
-    if (!accessToken) {
-      return {
-        'Accept-language': lang,
-        ...activeTenantAuthorizationHeaders,
-      };
-    }
     return {
-      ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
       'Accept-language': lang,
+      ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
       ...activeTenantAuthorizationHeaders,
     };
   }
@@ -204,6 +198,17 @@ export class SsoIntegrationConfiguration implements SsoConfiguration {
     if (!password) {
       throw new Error('password not set');
     }
+    const xSkipEmailVerification = localStorage.getItem('x-skip-email-verification');
+    const xSkipThrottle = localStorage.getItem('x-skip-throttle');
+
+    if (xSkipEmailVerification || xSkipThrottle) {
+      this.ssoRestSdkAngularService.updateHeaders({
+        ...this.getAuthorizationHeaders(),
+        ...(xSkipEmailVerification ? { ['x-skip-email-verification']: xSkipEmailVerification } : {}),
+        ...(xSkipThrottle ? { ['x-skip-throttle']: xSkipThrottle } : {}),
+      });
+    }
+
     return this.fingerprintService.getFingerprint().pipe(
       mergeMap((fingerprint) =>
         this.ssoRestSdkAngularService

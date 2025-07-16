@@ -205,6 +205,8 @@
   },
   "sso-afat": {
     "Users for tenant #{{tenantId}}": "Users for tenant #{{tenantId}}",
+    "select tenant": "select tenant",
+    "Loading...": "Loading...",
     "input search text": "input search text",
     "Invite Members": "Invite Members",
     "Action": "Action",
@@ -348,6 +350,7 @@
     "Success": "Success",
     "id not set": "ID not set",
     "sso-invite-members.form.fields.emails": "Emails (separated by commas)",
+    "Email confirmation email sent, link will be valid for {{timeoutMinutes}} minutes": "Email confirmation email sent, link will be valid for {{timeoutMinutes}} minutes",
     "Validation errors": "Validation errors",
     "Profile data updated successfully!": "Profile data updated successfully!",
     "Update": "Update",
