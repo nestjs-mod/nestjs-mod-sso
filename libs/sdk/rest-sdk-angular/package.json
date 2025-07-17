@@ -1,5 +1,5 @@
 {
-  "name": "@nestjs-mod/sso-rest-sdk-angular",
+  "name": "@nestjs-mod/rest-sdk-angular",
   "description": "Browser client for Single Sign-On on NestJS and Angular with webhooks and social authorization",
   "keywords": [
     "single-sign-n",
@@ -7,7 +7,7 @@
     "client",
     "angular"
   ],
-  "version": "1.12.0",
+  "version": "1.11.0",
   "peerDependencies": {
     "@angular/common": "*",
     "@angular/core": "*",
