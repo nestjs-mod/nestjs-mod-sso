@@ -1,3 +1,9 @@
+## [1.17.1](https://github.com/nestjs-mod/nestjs-mod-sso/compare/client-v1.17.0...client-v1.17.1) (2025-07-17)
+
+### Bug Fixes
+
+- rename sdk for server ([725b0d5](https://github.com/nestjs-mod/nestjs-mod-sso/commit/725b0d58729fedda82e75c515fe74354985b348e))
+
 # [1.17.0](https://github.com/nestjs-mod/nestjs-mod-sso/compare/client-v1.16.0...client-v1.17.0) (2025-07-16)
 
 ### Features
